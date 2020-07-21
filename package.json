@@ -1,0 +1,9 @@
+{
+  "name": "bulma-woocommerce",
+  "version": "1.0.0",
+  "description": "SCSS Package to make Woocomerce styled with Bulma classes and components",
+  "main": "index.scss",
+  "repository": "git@github.com:Fox-Group-International/bulma-woocommerce.git",
+  "author": "Rob Humar <rhumar@foxgroupint.com>",
+  "license": "MIT"
+}
