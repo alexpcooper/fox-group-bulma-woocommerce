@@ -5,5 +5,11 @@
   "main": "index.scss",
   "repository": "git@github.com:Fox-Group-International/bulma-woocommerce.git",
   "author": "Rob Humar <rhumar@foxgroupint.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "stylelint": "^13.6.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-webpack-plugin": "^2.1.0"
+  }
 }
