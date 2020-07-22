@@ -22,6 +22,10 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
+    # Install packages with Yarn
+    - name: Install packages
+      run: yarn
+    
     # Runs a single command using the runners shell
     - name: Run stylelint
       run: yarn lint:styles
