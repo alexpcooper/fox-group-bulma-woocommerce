@@ -13,3 +13,7 @@ To use please @import the /index.scss file of this package into your SCSS after 
 ### Installation
 
 To develop please run `yarn` to install required packages
+
+### Stylelint
+
+We are following a set of stylesheet formatting rules. Please run `yarn lint:styles` before pushing to the repo

@@ -6,6 +6,9 @@
   "repository": "git@github.com:Fox-Group-International/bulma-woocommerce.git",
   "author": "Rob Humar <rhumar@foxgroupint.com>",
   "license": "MIT",
+  "scripts": {
+    "lint:styles": "stylelint \"src/*.{css,sass,scss,sss,less}\""
+  },
   "dependencies": {},
   "devDependencies": {
     "stylelint": "^13.6.1",
