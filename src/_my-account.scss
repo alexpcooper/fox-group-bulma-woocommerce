@@ -1,0 +1,68 @@
+/**
+ * My account WooCommerce styles
+ */
+.my-account {
+  .woocommerce {
+    @extend .columns;
+
+    form {
+      h3 {
+        @extend .has-text-weight-semibold;
+      }
+    }
+
+    .woocommerce-MyAccount-navigation {
+      @extend .menu, .mb-1, .column, .is-one-fifth;
+
+      ul {
+        @extend .menu-list, .ml-0, .mt-0;
+
+        list-style: none;
+      }
+
+      li {
+        @extend .mt-0;
+
+        a {
+          color: $link;
+        }
+      }
+    }
+
+    .woocommerce-MyAccount-content {
+      @extend .py-4;
+
+      .woocommerce-Button {
+        @extend .mt-0;
+      }
+    }
+
+    .woocommerce-address-fields__field-wrapper {
+      @extend .mb-5;
+    }
+
+    .u-columns.col2-set {
+      @extend .columns;
+
+      .u-column1,
+      .u-column2 {
+        @extend .column, ;
+      }
+    }
+
+    .woocommerce-form-row.form-row {
+      @extend .mt-3;
+    }
+  }
+
+  .woocommerce-Address-title {
+    @extend .mt-4;
+  }
+}
+
+.woocommerce-address-fields,
+.woocommerce-EditAccountForm.edit-account {
+  p {
+    @extend .my-4;
+  }
+}

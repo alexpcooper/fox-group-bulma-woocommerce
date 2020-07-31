@@ -1,0 +1,44 @@
+/**
+* Buttons
+*/
+
+a.button,
+button.button,
+input.button,
+#respond input#submit {
+  @extend .button;
+  @extend .button.is-primary;
+
+  &.loading {
+    @extend .button.is-loading;
+  }
+
+  &.added::after {
+    content: "\2714";
+    margin-left: 0.53em;
+    vertical-align: bottom;
+  }
+
+  &.alt {
+    @extend .button.is-primary;
+  }
+
+  &:disabled,
+  &.disabled,
+  &:disabled[disabled] {
+    @extend .button.is-dark;
+    @extend .button.disabled;
+  }
+}
+
+.woocommerce-Message {
+  &.woocommerce-Message--info {
+    // line-height: 40px;
+
+    a.woocommerce-Button {
+      @extend .px-0, .py-0, .ml-0, .mr-2, .my-0;
+
+      background-color: transparent;
+    }
+  }
+}
