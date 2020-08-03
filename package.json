@@ -1,5 +1,5 @@
 {
-  "name": "bulma-woocommerce",
+  "name": "@fox-group-international/bulma-woocommerce",
   "version": "1.0.0",
   "description": "SCSS Package to make Woocomerce styled with Bulma classes and components",
   "main": "index.scss",
