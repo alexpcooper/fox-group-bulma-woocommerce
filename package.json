@@ -1,6 +1,6 @@
 {
   "name": "@fox-group-international/bulma-woocommerce",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "SCSS Package to make Woocomerce styled with Bulma classes and components",
   "main": "index.scss",
   "repository": "git@github.com:Fox-Group-International/bulma-woocommerce.git",
@@ -15,5 +15,7 @@
     "stylelint-config-standard": "~18.2.0",
     "stylelint-webpack-plugin": "^2.1.0"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }
