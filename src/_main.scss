@@ -2,65 +2,27 @@
  * Main WooCommerce styles
  */
 
-header {
-  @extend .mb-4;
-}
-
-h1 {
-  @extend .title, .is-size-1, .has-text-centered-mobile, .py-5;
-}
-
-h2 {
-  @extend .subtitle, .is-size-3, .has-text-centered-mobile, .pt-3;
-}
-
-h3 {
-  @extend .is-size-4;
-}
-
-a.edit {
-  @extend .is-size-5;
-}
-
-.onsale {
-  @extend .has-background-info, .has-text-centered, .mt-1, .ml-1;
-
-  position: absolute;
-  color: $white;
-  background-color: $blue;
-  height: $size-2;
-  width: $size-2;
-  border-radius: $radius-rounded;
-  font-size: $size-7;
-  line-height: $size-2;
-  font-weight: $weight-bold;
-  z-index: 999;
-}
-
-span.price,
-p.price {
-  color: $black;
-  font-size: $size-6;
-  line-height: $size-3;
-
-  ins {
-    font-weight: $weight-bold;
-  }
-}
-
-p.stock {
-  font-size: $size-6;
-}
-
-.stock {
-  color: $black;
-}
-
-.out-of-stock {
-  color: $red;
-}
-
 .woocommerce {
+  header {
+    @extend .mb-4;
+  }
+
+  h1 {
+    @extend .title, .is-size-1, .has-text-centered-mobile, .py-5;
+  }
+
+  h2 {
+    @extend .subtitle, .is-size-2, .has-text-centered-mobile, .pt-3;
+  }
+
+  h3 {
+    font-size: $size-3;
+  }
+
+  a.edit {
+    @extend .is-size-5;
+  }
+
   table {
     @extend .table, .is-striped;
   }
@@ -68,18 +30,56 @@ p.stock {
   ul {
     list-style: none !important;
   }
-}
 
-.remove {
-  @extend .is-medium, .delete;
-}
+  .remove {
+    @extend .is-medium, .delete;
+  }
 
-.required {
-  @extend .is-danger;
-}
+  .required {
+    @extend .is-danger;
+  }
 
-.active {
-  @extend .is-active;
+  .active {
+    @extend .is-active;
+  }
+
+  .onsale {
+    @extend .has-background-info, .has-text-centered, .mt-1, .ml-1;
+
+    position: absolute;
+    color: $white;
+    background-color: $blue;
+    height: $size-2;
+    width: $size-2;
+    border-radius: $radius-rounded;
+    font-size: $size-7;
+    line-height: $size-2;
+    font-weight: $weight-bold;
+    z-index: 999;
+  }
+
+  span.price,
+  p.price {
+    color: $black;
+    font-size: $size-6;
+    line-height: $size-3;
+
+    ins {
+      font-weight: $weight-bold;
+    }
+  }
+
+  p.stock {
+    font-size: $size-6;
+  }
+
+  .stock {
+    color: $black;
+  }
+
+  .out-of-stock {
+    color: $red;
+  }
 }
 
 .woocommerce-shipping-methods {

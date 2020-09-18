@@ -8,7 +8,7 @@ or
 
 `npm install bulma-woocommerce`
 
-## Useage
+## Usage
 
 To use please @import the /index.scss file of this package into your SCSS after you have imported Bulma.
 
