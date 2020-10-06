@@ -2,86 +2,70 @@
  * Main WooCommerce styles
  */
 
-.woocommerce {
-  header {
-    @extend .mb-4;
-  }
+div.woocommerce {
+  padding-left: $column-gap;
+  padding-right: $column-gap;
 
-  h1 {
-    @extend .title, .is-size-1, .has-text-centered-mobile, .py-5;
+  @include desktop {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   h2 {
-    @extend .subtitle, .is-size-2, .has-text-centered-mobile, .pt-3;
+    font-size: $size-2;
+    margin-top: map-get($spacing-values, "5");
+    margin-bottom: map-get($spacing-values, "3");
   }
 
   h3 {
     font-size: $size-3;
+    margin-bottom: map-get($spacing-values, "2");
   }
 
   a.edit {
-    @extend .is-size-5;
+    font-size: $size-5;
   }
 
   table {
     @extend .table, .is-striped;
-  }
 
-  ul {
-    list-style: none !important;
+    width: 100%;
   }
 
   .remove {
-    @extend .is-medium, .delete;
+    font-size: 20px;
+    font-weight: bold;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 100%;
+    text-decoration: none;
+    line-height: 18px;
+    color: $dark;
   }
 
-  .required {
-    @extend .is-danger;
+  .price del {
+    opacity: 0.5;
+    display: inline-block;
   }
 
-  .active {
-    @extend .is-active;
-  }
+  .woocommerce-columns {
+    @include columns;
 
-  .onsale {
-    @extend .has-background-info, .has-text-centered, .mt-1, .ml-1;
+    .woocommerce-column {
+      @include column;
+    }
 
-    position: absolute;
-    color: $white;
-    background-color: $blue;
-    height: $size-2;
-    width: $size-2;
-    border-radius: $radius-rounded;
-    font-size: $size-7;
-    line-height: $size-2;
-    font-weight: $weight-bold;
-    z-index: 999;
-  }
-
-  span.price,
-  p.price {
-    color: $black;
-    font-size: $size-6;
-    line-height: $size-3;
-
-    ins {
-      font-weight: $weight-bold;
+    @include tablet {
+      @for $i from 1 through 12 {
+        &--#{$i} {
+          .woocommerce-column {
+            flex: none;
+            width: 100%/$i;
+          }
+        }
+      }
     }
   }
-
-  p.stock {
-    font-size: $size-6;
-  }
-
-  .stock {
-    color: $black;
-  }
-
-  .out-of-stock {
-    color: $red;
-  }
-}
-
-.woocommerce-shipping-methods {
-  @extend .ml-0, .mt-0;
 }

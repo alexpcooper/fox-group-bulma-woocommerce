@@ -1,44 +1,38 @@
 /**
 * Buttons
 */
+div.woocommerce {
+  a.button,
+  button.button,
+  input.button {
+    &.added::after {
+      content: "\2714";
+      margin-left: 0.53em;
+      vertical-align: bottom;
+    }
 
-a.button,
-button.button,
-input.button,
-#respond input#submit {
-  @extend .button;
-  @extend .button.is-primary;
+    &.alt {
+      background-color: nth(map-get($colors, "primary"), 1);
+      border-color: transparent;
+      color: nth(map-get($colors, "primary"), 2);
 
-  &.loading {
-    @extend .button.is-loading;
+      &:hover {
+        background-color: darken(nth(map-get($colors, "primary"), 1), 2.5%);
+      }
+    }
   }
 
-  &.added::after {
-    content: "\2714";
-    margin-left: 0.53em;
-    vertical-align: bottom;
-  }
+  a.button {
+    &.is-loading {
+      color: transparent !important;
+      pointer-events: none;
 
-  &.alt {
-    @extend .button.is-primary;
-  }
+      &::after {
+        @include loader;
+        @include center(1em);
 
-  &:disabled,
-  &.disabled,
-  &:disabled[disabled] {
-    @extend .button.is-dark;
-    @extend .button.disabled;
-  }
-}
-
-.woocommerce-Message {
-  &.woocommerce-Message--info {
-    // line-height: 40px;
-
-    a.woocommerce-Button {
-      @extend .px-0, .py-0, .ml-0, .mr-2, .my-0;
-
-      background-color: transparent;
+        position: absolute !important;
+      }
     }
   }
 }

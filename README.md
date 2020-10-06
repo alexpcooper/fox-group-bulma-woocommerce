@@ -12,6 +12,12 @@ or
 
 To use please @import the /index.scss file of this package into your SCSS after you have imported Bulma.
 
+You must disable the Woocommerce stylesheets by adding the following to your functions.php file:
+
+```
+add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+```
+
 ## Develop
 
 ### Requirements

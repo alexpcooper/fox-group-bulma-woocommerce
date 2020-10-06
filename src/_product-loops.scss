@@ -2,75 +2,79 @@
 * Product loops WooCommerce styles
 */
 
-ul {
-  &.products {
-    @extend .columns;
-    @extend .is-multiline;
+div.woocommerce {
+  .woocommerce-result-count {
+    float: left;
+  }
 
-    li {
-      @extend .column;
-      @extend .is-one-quarter;
+  .woocommerce-ordering {
+    float: right;
+  }
+
+  .woocommerce-ordering,
+  .woocommerce-result-count {
+    margin-bottom: map-get($spacing-values, "2");
+    padding: map-get($spacing-values, "2") 0;
+  }
+
+  ul.products {
+    @include columns;
+    @include is-multiline;
+
+    clear: both;
+
+    .product {
+      @include column;
 
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: map-get($spacing-values, "6");
 
-      img {
-        width: 100%;
+      h2 {
+        margin-top: 0;
+      }
+
+      .woocommerce-loop-product__title {
+        color: $dark;
+        font-weight: $weight-bold;
+      }
+
+      .price {
+        margin-bottom: map-get($spacing-values, "5");
+        display: block;
+        color: $dark;
+      }
+    }
+
+    @include tablet {
+      @for $i from 1 through 12 {
+        &.columns-#{$i} {
+          .product {
+            flex: none;
+            width: 100%/$i;
+          }
+        }
       }
     }
   }
 
-  .button {
-    @extend .is-pulled-right, .my-4;
-  }
-}
-
-span.woocommerce-Price-amount {
-  text-decoration: none;
-}
-
-.woocommerce-ordering {
-  @extend .select;
-  @extend .mb-6;
-
-  @include mobile {
-    width: 100%;
-
-    select {
-      width: 100%;
-    }
-  }
-}
-
-.products h2.woocommerce-loop-product__title {
-  @extend .is-size-4;
-}
-
-.woocommerce-result-count {
-  @extend .has-text-centered-mobile;
-
-  @include tablet {
-    float: right;
-  }
-
-  @include mobile {
-    margin-bottom: 10px;
+  .woocommerce-loop-product__link {
+    position: relative;
+    display: block;
   }
 }
 
 //Pagination
 .woocommerce-pagination {
-  @extend .pagination, .is-centered;
+  @extend .pagination;
 
   .page-numbers {
-    @extend .pagination-list, .ml-0;
+    @extend .pagination-list;
 
     li {
-      @extend .is-inline;
-
+      display: inline;
       margin: 2px;
 
       span.current {

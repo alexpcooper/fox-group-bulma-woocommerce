@@ -1,6 +1,6 @@
 {
   "name": "@fox-group-international/bulma-woocommerce",
-  "version": "1.7.0",
+  "version": "2.0.0",
   "description": "SCSS Package to make Woocomerce styled with Bulma classes and components",
   "main": "index.scss",
   "repository": "git@github.com:Fox-Group-International/bulma-woocommerce.git",
@@ -9,7 +9,9 @@
   "scripts": {
     "lint:styles": "stylelint \"src/*.{css,sass,scss,sss,less}\""
   },
-  "dependencies": {},
+  "dependencies": {
+    "bulma": "^0.9.1"
+  },
   "devDependencies": {
     "stylelint": "^13.6.1",
     "stylelint-config-standard": "~18.2.0",
