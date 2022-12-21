@@ -49,23 +49,4 @@ div.woocommerce {
     opacity: 0.5;
     display: inline-block;
   }
-
-  .woocommerce-columns {
-    @include columns;
-
-    .woocommerce-column {
-      @include column;
-    }
-
-    @include tablet {
-      @for $i from 1 through 12 {
-        &--#{$i} {
-          .woocommerce-column {
-            flex: none;
-            width: 100%/$i;
-          }
-        }
-      }
-    }
-  }
 }
